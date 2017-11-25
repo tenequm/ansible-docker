@@ -1,14 +1,15 @@
 galaxy_info:
   author: Mykhaylo Kolesnik
-  description: Role for docker and docker-compose installation.
+  description: Role for docker installation with additional configurations.
   license: MIT
 
   min_ansible_version: 2.4
 
   platforms:
-    - name: Ubuntu
     - name: Debian
+      versions:
+        - jessie
 
   galaxy_tags:
     - server
-    - firewall
+    - docker
