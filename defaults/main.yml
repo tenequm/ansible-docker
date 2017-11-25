@@ -5,6 +5,7 @@ docker_compose_version: "1.17.1"
 docker_compose_path: /usr/local/bin/docker-compose
 
 # Docker daemon configuration options.
+docker_config: {}
 docker_options:
   api-cors-header: "{{ docker_api_cors_header|d(none) }}"
   authorization-plugins: "{{ docker_authorization_plugins|d(none) }}"
