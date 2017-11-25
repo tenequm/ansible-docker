@@ -40,8 +40,8 @@
   import_tasks: docker-compose.yml
   when: docker_compose_install
 
-- name: Adding Docker daemon configuration.
-  import_tasks: daemon_config.yml
+- name: Adding configurations.
+  import_tasks: configurations.yml
 
 - name: Ensure Docker is started and enabled at boot.
   service: name=docker state=started enabled=yes
