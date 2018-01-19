@@ -1,7 +1,7 @@
 ---
 # General options.
 docker_compose_install: true
-docker_compose_version: "1.17.1"
+docker_compose_version: "1.18.0"
 docker_compose_path: /usr/local/bin/docker-compose
 docker_execute_restart: true
 docker_enable_logrotate: true
