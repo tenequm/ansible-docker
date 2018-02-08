@@ -31,15 +31,15 @@
   when: add_repository_key|failed
 
 - name: Add Docker repository.
-  apt_repository: repo="deb [arch=amd64] https://download.docker.com/linux/debian jessie stable"
-  when: ansible_distribution_release == "jessie"
+  apt_repository: repo="deb [arch=amd64] https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable"
+  when: ansible_distribution == "Debian"
 
 - name: Add Docker repository.
-  apt_repository: repo="deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
-  when: ansible_distribution_release == "xenial"
+  apt_repository: repo="deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+  when: ansible_distribution == "Ubuntu"
 
 - name: Install Docker.
-  apt: name=docker-ce state=present
+  apt: name=docker-ce
 
 - name: Installing docker-compose.
   import_tasks: docker-compose.yml
