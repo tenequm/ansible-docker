@@ -39,7 +39,7 @@ This role requires Ansible 2.4 or higher. Requirements are listed in the metadat
 | `docker_default_runtime` | No | `Undefined` | Default OCI runtime for containers |
 | `docker_default_ulimits` | No | `Undefined` | Default ulimits for containers |
 | `docker_disable_legacy_registry` | No | `Undefined` | Disable contacting legacy registries |
-| `docker_dns` | No | `Undefined` | DNS server to use |
+| `docker_dns` | No | `Undefined` | DNS server to us (should be a list!) |
 | `docker_dns_opts` | No | `Undefined` | DNS options to use |
 | `docker_dns_search` | No | `Undefined` | DNS search domains to use |
 | `docker_exec_opts` | No | `Undefined` | Runtime execution options |
