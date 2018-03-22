@@ -1,6 +1,6 @@
 # Ansible Role: Docker
 
-This role applies Docker with daemon configurations and  docker-compose installation (it can also deletes previous version if it is installed) for Debian Jessie. It also adds Logrotate configurations for containers and volumes.
+This role applies Docker with daemon configurations and  docker-compose installation (it can also deletes previous version if it is installed) for Debian Jessie/Stretch and Ubuntu Xenial. It also adds Logrotate configurations for containers and volumes.
 
 ## Requirements
 
@@ -12,7 +12,7 @@ This role requires Ansible 2.4 or higher. Requirements are listed in the metadat
 |----------|----------|---------|----------|
 | `docker_compose_install` | No | `true` | Whether to install docker-compose or not. |
 | `docker_compose_path` | No | `/usr/local/bin/docker-compose` | Docker-compose bin file path. |
-| `docker_compose_verision` | No | `1.17.1` | Docker-compose version. |
+| `docker_compose_version` | No | `1.20.1` | Docker-compose version. |
 | `docker_execute_restart` | No | `true` | Whether to execute restart after all tasks are completed. |
 | `docker_enable_logrotate` | No | `true` | Whether to add logrotate configuration for container logs. |
 | `docker_enable_volumes_logrotate` | No | `true` | Whether to add logrotate configuration for docker volumes logs. |
