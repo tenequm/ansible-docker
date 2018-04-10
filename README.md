@@ -37,6 +37,7 @@ This role requires Ansible 2.4 or higher. Requirements are listed in the metadat
 | `docker_default_gateway` | No | `Undefined` | Container default gateway IPv4 address |
 | `docker_default_gateway_v6` | No | `Undefined` | Container default gateway IPv6 address |
 | `docker_default_runtime` | No | `Undefined` | Default OCI runtime for containers |
+| `docker_default_shm_size` | No | `Undefined` | Default /dev/shm size for containers |
 | `docker_default_ulimits` | No | `Undefined` | Default ulimits for containers |
 | `docker_disable_legacy_registry` | No | `Undefined` | Disable contacting legacy registries |
 | `docker_dns` | No | `Undefined` | DNS server to us (should be a list!) |

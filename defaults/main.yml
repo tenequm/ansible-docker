@@ -22,6 +22,7 @@ docker_options:
   default-gateway: "{{ docker_default_gateway|d(none) }}"
   default-gateway-v6: "{{ docker_default_gateway_v6|d(none) }}"
   default-runtime: "{{ docker_default_runtime|d(none) }}"
+  default-shm-size: "{{ docker_default_shm_size|d(none) }}"
   default-ulimits: "{{ docker_default_ulimits|d(none) }}"
   disable-legacy-registry: "{{ docker_disable_legacy_registry|d(none) }}"
   dns: "{{ docker_dns|d(none) }}"
