@@ -30,17 +30,17 @@
     warn: no
   when: add_repository_key is failed
 
-- name: Add Docker repository.
+- name: Add Docker repository. [Debian]
   apt_repository: repo="deb [arch=amd64] https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable"
   when: ansible_distribution == "Debian"
 
-- name: Add Docker repository.
+- name: Add Docker repository. [Ubuntu]
   apt_repository: repo="deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
-  when: ansible_distribution == "Ubuntu" && ansible_distribution_release != "bionic"
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_release != "bionic"
 
-- name: Add Docker repository.
+- name: Add Docker repository. [Ubuntu.bionic]
   apt_repository: repo="deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} edge"
-  when: ansible_distribution == "Ubuntu" && ansible_distribution_release == "bionic"
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_release == "bionic"
 
 - name: Install Docker.
   apt: name=docker-ce
